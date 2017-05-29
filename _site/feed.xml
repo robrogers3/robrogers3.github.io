@@ -1,14 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-29T02:59:09-07:00</updated><id>http://localhost:4000/</id><title type="html">Technical Handicaps Overcome</title><subtitle>Come here to find solutions to uber problems without having to compile hundreds of stackoverflow posts.
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/05/28/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-05-28T17:29:02-07:00</published><updated>2017-05-28T17:29:02-07:00</updated><id>http://localhost:4000/jekyll/update/2017/05/28/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/05/28/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-29T02:55:41-07:00</updated><id>http://localhost:4000/</id><title type="html">Technical Handicaps Overcome</title><subtitle>Come here to find solutions to uber problems without having to compile hundreds of stackoverflow posts.
+</subtitle><entry><title type="html">Emacs as a PHP IDE!</title><link href="http://localhost:4000/emacs/php/2017/05/28/emacs-for-php.html" rel="alternate" type="text/html" title="Emacs as a PHP IDE!" /><published>2017-05-28T17:29:02-07:00</published><updated>2017-05-28T17:29:02-07:00</updated><id>http://localhost:4000/emacs/php/2017/05/28/emacs-for-php</id><content type="html" xml:base="http://localhost:4000/emacs/php/2017/05/28/emacs-for-php.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;requirements-for-an-ide&quot;&gt;Requirements for an IDE&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;supports php for:
+    &lt;ul&gt;
+      &lt;li&gt;correct code style (PSR2)&lt;/li&gt;
+      &lt;li&gt;support for namespaces&lt;/li&gt;
+      &lt;li&gt;syntax checker&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;markup support
+    &lt;ul&gt;
+      &lt;li&gt;html,css,blade,twig&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;support for javascript
+    &lt;ul&gt;
+      &lt;li&gt;code style&lt;/li&gt;
+      &lt;li&gt;syntax&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;navigating to definitions and symbols&lt;/li&gt;
+  &lt;li&gt;refactoring tools&lt;/li&gt;
+  &lt;li&gt;finding files easily&lt;/li&gt;
+  &lt;li&gt;listing files both in directories and those already opened.&lt;/li&gt;
+  &lt;li&gt;git integration&lt;/li&gt;
+  &lt;li&gt;decent syntax highlighting and fonts&lt;/li&gt;
+  &lt;li&gt;code completion&lt;/li&gt;
+  &lt;li&gt;snippet support&lt;/li&gt;
+  &lt;li&gt;exec code inline&lt;/li&gt;
+  &lt;li&gt;integrated/easy unit testing&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;meeting-the-requirements&quot;&gt;Meeting the requirements.&lt;/h2&gt;
+
+&lt;h1 id=&quot;the-first-place-to-start-is-a-emacs-file&quot;&gt;The first place to start is a .emacs file&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;;;requires
+
+;syntax and highlighting
+(require 'web-mode)
+(require 'php-mode)
+;syntax checking
+(require 'flymake-php)
+;refactoring
+(require 'php-refactor-mode)
+;snippets
+(require 'php-auto-yasnippets)
+;auto-complete
+(require 'company-php)
+(require 'ac-php)
+
+;;hooks
+(autoload 'php-mode &quot;php-mode&quot; &quot;php editing mode.&quot; t)
+(add-hook 'php-mode-hook 'flymake-php-load)
+(add-hook 'php-mode-hook 'php-refactor-mode)
+(add-hook 'php-mode-hook
+          '(lambda ()
+             (company-mode t)
+             (ac-php-core-eldoc-setup) ;; enable eldoc
+             (make-local-variable 'company-backends)
+             (add-to-list 'company-backends 'company-ac-php-backend)
+			 (auto-complete-mode t)
+			 (setq ac-sources  '(ac-source-php ) )
+			 (yas-global-mode 1)
+			 (ac-php-core-eldoc-setup ) ;; enable eldoc
+
+	     ))
+
+(setq web-mode-engines-alist
+      '((&quot;php&quot;    . &quot;\\.phtml\\'&quot;)
+        (&quot;blade&quot;  . &quot;\\.blade\\.&quot;))
+)
+
+;;mode to file type mapping
+(setq auto-mode-alist (cons '(&quot;\\.html$&quot; . html-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '(&quot;\\.php$&quot; . php-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '(&quot;\\.blade\\.php\\'&quot; . web-mode))&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;the-packages-you-need-for-the-functionality&quot;&gt;The packages you need for the functionality&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;php-mode&lt;/li&gt;
+  &lt;li&gt;web-mode&lt;/li&gt;
+  &lt;li&gt;phpunit&lt;/li&gt;
+  &lt;li&gt;auto-complete&lt;/li&gt;
+  &lt;li&gt;epl&lt;/li&gt;
+  &lt;li&gt;ac-php-core&lt;/li&gt;
+  &lt;li&gt;ac-php&lt;/li&gt;
+  &lt;li&gt;company-php&lt;/li&gt;
+  &lt;li&gt;company&lt;/li&gt;
+  &lt;li&gt;grizzl&lt;/li&gt;
+  &lt;li&gt;fiplr grizzl&lt;/li&gt;
+  &lt;li&gt;flymake-php&lt;/li&gt;
+  &lt;li&gt;flymake-phpcs&lt;/li&gt;
+  &lt;li&gt;magit&lt;/li&gt;
+  &lt;li&gt;php-auto-yasnippets&lt;/li&gt;
+  &lt;li&gt;yasnippet&lt;/li&gt;
+  &lt;li&gt;php-cs-fixer&lt;/li&gt;
+  &lt;li&gt;php-refactor-mode&lt;/li&gt;
+  &lt;li&gt;xcscope&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-binaries-you-need-to-make-the-packages-work&quot;&gt;The binaries you need to make the packages work&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;refactor.phar&lt;/li&gt;
+  &lt;li&gt;phpcbf&lt;/li&gt;
+  &lt;li&gt;phpcs&lt;/li&gt;
+  &lt;li&gt;cscope&lt;/li&gt;
+  &lt;li&gt;phpunit&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
